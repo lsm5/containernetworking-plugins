@@ -1,0 +1,11 @@
+---
+image: registry.gitlab.com/lsm5/rpm-builder:bionic
+
+stages:
+     - build
+
+debbuild:
+     stage: build
+     script:
+        - cd ~
+        - PACKAGE=containernetworking-plugins bash autobuilder.sh

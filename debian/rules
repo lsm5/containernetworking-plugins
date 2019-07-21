@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+
+export DH_GOPKG := github.com/containernetworking/plugins
+#export DH_GOLANG_INSTALL_EXTRA := libcontainer/seccomp/fixtures
+BUILDDIR := $(shell pwd)
+UPSTREAM_TAG=v0.8.3
+
+%:
+	dh $@ --buildsystem=golang --with=golang --builddirectory=$(BUILDDIR)
+
+override_dh_clean:
+	dh_clean
+	rm -rf $(BUILDDIR)/src $(BUILDDIR)/obj-*-linux-gnu $(BUILDDIR)/bin $(BUILDDIR)/gopath
+
+override_dh_auto_configure:
+	dh_auto_configure -O--buildsystem=golang
+	# Include vendored dependencies
+	cp -rp $(BUILDDIR)/vendor $(BUILDDIR)/src
+	mkdir -p $(BUILDDIR)/src/$(DH_GOPKG)
+	rsync -a $(BUILDDIR)/* $(BUILDDIR)/src/$(DH_GOPKG) --exclude src
+
+override_dh_auto_build:
+	GO111MODULE=off GOPATH=$(BUILDDIR) ./build_linux.sh
+
+override_dh_auto_install:
+	install -dp $(BUILDDIR)/debian/containernetworking-plugins/opt/cni/bin
+	install -p -m 755 $(BUILDDIR)/bin/* $(BUILDDIR)/debian/containernetworking-plugins/opt/cni/bin
+
+override_dh_auto_test:
+

@@ -1,0 +1,91 @@
+containernetworking-plugins (0.8.3-3) stable; urgency=medium
+
+  * remove debian/source/format cause OBS complains 
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Mon, 18 Nov 2019 13:35:08 +0000
+
+containernetworking-plugins (0.8.3-2) stable; urgency=medium
+
+  * rebuild for OBS
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Mon, 18 Nov 2019 13:15:11 +0000
+
+containernetworking-plugins (0.8.3-1~ubuntu19.04~ppa1) disco; urgency=medium
+
+  * bump to v0.8.3
+
+ -- RH Container Bot <rh.container.bot@gmail.com>  Mon, 11 Nov 2019 13:22:09 +0000
+
+containernetworking-plugins (0.8.2-1~ubuntu19.04~ppa3) disco; urgency=medium
+
+  * autobuilt v0.8.2
+
+ -- RH Container Bot <rh.container.bot@gmail.com>  Wed, 09 Oct 2019 11:04:54 +0000
+
+containernetworking-plugins (0.8.2-1~ubuntu19.04~ppa2) disco; urgency=medium
+
+  * autobuilt v0.8.2
+
+ -- RH Container Bot <rh.container.bot@gmail.com>  Wed, 09 Oct 2019 10:54:56 +0000
+
+containernetworking-plugins (0.8.2-1~ubuntu19.04~ppa1) disco; urgency=medium
+
+  * bump to v0.8.2
+
+ -- Lokesh Mandvekar (Bot) <lsm5+bot@fedoraproject.org>  Mon, 19 Aug 2019 17:32:55 +0000
+
+containernetworking-plugins (0.8.1-1~ubuntu19.04~ppa3) disco; urgency=medium
+
+  * update standards-version, rebuild 
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Sun, 28 Jul 2019 21:50:55 +0000
+
+containernetworking-plugins (0.8.1-1~ubuntu19.04~ppa2) disco; urgency=medium
+
+  * build correctly for disco
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Sun, 28 Jul 2019 14:47:52 +0000
+
+containernetworking-plugins (0.8.1-1~ubuntu18.04~ppa1) bionic; urgency=medium
+
+  * bump to 0.8.1
+
+ -- Lokesh Mandvekar (Bot) <lsm5+bot@fedoraproject.org>  Sun, 21 Jul 2019 22:57:19 +0000
+
+containernetworking-plugins (0.7.5-1~ubuntu18.04~ppa2) bionic; urgency=medium
+
+  * conflict with kubernetes-cni
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Fri, 31 May 2019 14:16:52 +0000
+
+containernetworking-plugins (0.7.5-1~ubuntu18.04~ppa1) bionic; urgency=medium
+
+  * bump to v0.7.5
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Wed, 20 Mar 2019 17:49:42 +0000
+
+containernetworking-plugins (0.7.3-1~ubuntu18.04~ppa2) bionic; urgency=medium
+
+  * bump to v0.7.3
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Sun, 04 Nov 2018 14:36:21 -0500
+
+containernetworking-plugins (0.7.0-1~ubuntu16.04.2~ppa1) xenial; urgency=medium
+
+  * bump to v0.7.0
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Mon, 26 Feb 2018 19:53:19 +0000
+
+containernetworking-plugins (0.5.2-2ppa1ubuntu1) xenial; urgency=medium
+
+  * build for arm64 and s390x
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Tue, 13 Feb 2018 03:45:07 +0000
+
+containernetworking-plugins (0.5.2-1ppa1) zesty; urgency=medium
+
+  * initial package
+  * source tarball uses upstream commit dcf7368 + debian patches
+
+ -- Lokesh Mandvekar <lsm5@fedoraproject.org>  Wed, 28 Jun 2017 16:37:22 -0400
+

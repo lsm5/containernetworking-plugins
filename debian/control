@@ -1,0 +1,24 @@
+Source: containernetworking-plugins
+Section: devel
+Priority: extra
+Maintainer: Lokesh Mandvekar <lsm5@fedoraproject.org>
+Build-Depends: debhelper (>= 9),
+    rsync,
+    golang,
+    dh-golang
+Standards-Version: 4.3.0
+Homepage: https://github.com/containernetworking/plugins
+Vcs-Git: https://github.com/lsm5/plugins
+Vcs-Browser: https://github.com/lsm5/plugins
+
+Package: containernetworking-plugins
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: kubernetes-cni
+Built-Using: ${misc:Built-Using}
+Description: Libraries for writing CNI plugins
+ The CNI (Container Network Interface) project consists of a specification
+ and libraries for writing plugins to configure network interfaces in Linux
+ containers, along with a number of supported plugins. CNI concerns itself
+ only with network connectivity of containers and removing allocated resources
+ when the container is deleted.
